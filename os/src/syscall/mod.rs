@@ -103,12 +103,12 @@ pub const SYSCALL_CONDVAR_WAIT: usize = 473;
 
 mod fs;
 mod process;
-mod sync;
+pub(crate) mod sync;
 mod thread;
 
 use fs::*;
 use process::*;
-use sync::*;
+pub use sync::*;
 use thread::*;
 
 use crate::fs::Stat;
